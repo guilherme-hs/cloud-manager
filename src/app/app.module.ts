@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import {routing, appRoutingProviders} from './app.routing';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,10 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   entryComponents: [AppComponent],
   bootstrap: [AppComponent]
 })
